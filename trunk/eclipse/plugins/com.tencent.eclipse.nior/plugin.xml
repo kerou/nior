@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="com.tencent.eclipse.nior"
+            name="Android—Nior">
+      </category>
+      <wizard
+            category="com.tencent.eclipse.nior"
+            class="com.tencent.eclipse.nior.wizards.NewNiroFileWizard"
+            icon="icons/sample.gif"
+            id="com.tencent.eclipse.nior.wizards.NewNiroFileWizard"
+            name="Nior Record&amp;Replay File">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="com.tencent.eclipse.nior.objectContribution"
+            nameFilter="*.nior"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="com.tencent.eclipse.nior.actions.Replay"
+               id="com.tencent.eclipse.nior.actions.Replay"
+               label="replay"
+               menubarPath="com.tencent.eclipse.nior.popupMenu/nior.separator1">
+         </action>
+         <menu
+               id="com.tencent.eclipse.nior.popupMenu"
+               label="Nior">
+            <separator
+                  name="nior.separator1">
+            </separator>
+         </menu>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.tencent.eclipse.nior.pref.PreferencePage"
+            id="com.tencent.eclipse.nior.preferencePage"
+            name="Nior">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.console.consoleFactories">
+      <consoleFactory
+            class="com.tencent.eclipse.nior.console.ConsoleFactory"
+            label="Nior">
+      </consoleFactory>
+   </extension>
+
+</plugin>

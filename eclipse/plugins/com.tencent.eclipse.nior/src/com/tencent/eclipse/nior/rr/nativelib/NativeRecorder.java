@@ -85,7 +85,7 @@ public class NativeRecorder extends NiorRecorder{
 			url = FileLocator.toFileURL(url);
 			device.pushFile(url.getPath(),NiorConstants.RECORDER_PATH);
 			//chmod for permission reason
-			device.executeShellCommand("chmod 555 "+NiorConstants.RECORDER_PATH,  new MultiLineShellReceiver());
+			device.executeShellCommand("su -c ' chmod 555 "+NiorConstants.RECORDER_PATH+" '",  new MultiLineShellReceiver());
 		} catch (Exception e) {
 			String msg = "failed pushing recorder to android device. url: "+url.toString();
 			Activator.logError(e, msg);

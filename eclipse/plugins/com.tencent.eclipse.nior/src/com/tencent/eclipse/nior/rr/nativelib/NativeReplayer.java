@@ -61,7 +61,7 @@ public class NativeReplayer extends NiorReplayer {
 			url = FileLocator.toFileURL(url);
 			device.pushFile(url.getPath(),NiorConstants.REPLAYER_PATH);
 			//chmod for permission reason
-			device.executeShellCommand("chmod 555 "+NiorConstants.REPLAYER_PATH,  new MultiLineShellReceiver());
+			device.executeShellCommand("su -c ' chmod 555 "+NiorConstants.REPLAYER_PATH+" '",  new MultiLineShellReceiver());
 		} catch (Exception e) {
 			String msg = "failed pushing replayer to android device";
 			Activator.logError(e, msg);

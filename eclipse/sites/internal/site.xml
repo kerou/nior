@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/com.tencent.eclipse.nior_1.0.0.201212241800.jar" id="com.tencent.eclipse.nior" version="1.0.0.201212241800">
+   <feature url="features/com.tencent.eclipse.nior_1.0.0.201301281936.jar" id="com.tencent.eclipse.nior" version="1.0.0.201301281936">
       <category name="com.tencent.eclipse.nior"/>
    </feature>
    <category-def name="com.tencent.eclipse.nior" label="nior category"/>
